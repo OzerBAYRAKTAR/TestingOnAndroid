@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class ShoppingViewModel @Inject constructor(
-    private val repository: ShoppingRepository
+    val repository: ShoppingRepository
 ): ViewModel() {
     val shoppingItems = repository.observeAllShoppingItems()
 

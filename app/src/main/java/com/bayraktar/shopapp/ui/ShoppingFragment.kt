@@ -5,22 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation.findNavController
 import com.bayraktar.shopapp.R
+import dagger.hilt.android.AndroidEntryPoint
 
+class ShoppingFragment : Fragment(R.layout.fragment_shopping) {
 
-class ShoppingFragment : Fragment() {
     lateinit var viewModel: ShoppingViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shopping, container, false)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-    }
+        viewModel = ViewModelProvider(requireActivity()).get(ShoppingViewModel::class.java)
 
+        fabAddShoppingItem.setOnClickListener {
+            findNavController().navigate(
+                ShoppingFragmentDirections.actionShoppingFragmentToAddShoppingItemFragment()
+            )
+        }
+    }
 }
