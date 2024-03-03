@@ -26,6 +26,9 @@ Does it work well on every device and API level?
 
 ### Scope
   Tests also vary depending on size, or degree of isolation:
+  
+<img width="300" alt="tesopes" src="https://github.com/OzerBAYRAKTAR/TestingOnAndroid/assets/105236639/43c6e48a-d07e-4094-b0f5-8ce4e8cbb77b">
+
 
 #### * Unit tests or (Small Test)
 Tests only verify a very small portion of the app, such as a method or class.
@@ -46,7 +49,6 @@ Mockito is a mocking framework that helps create mock objects for testing. It is
 involves verifying the correct behavior of an application's user interface by simulating user interactions and ensuring that the UI elements respond as expected. It is a crucial aspect of app testing to guarantee a positive user experience and catch any issues related to the graphical interface. UI tests are typically broader in scope than unit tests, covering interactions across multiple components and ensuring the overall integration of the app's UI.
 
 ### * Espresso 
-
 Espresso is a widely used UI testing framework for Android app development. It is part of the Android Testing Support Library and is designed to make writing and running UI tests for Android applications more efficient, reliable, and concise. Espresso is particularly well-suited for testing user interactions and ensuring that the app's user interface functions as expected.
 
 
